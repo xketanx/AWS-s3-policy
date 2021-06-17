@@ -1,0 +1,27 @@
+{
+  "Id": "Policy1623936735144",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1623936491288",
+      "Action": "s3:*",
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::mydatah76",
+      "Principal": {
+        "AWS": [
+          "arn:aws:iam::689200301437:group/s3group"
+        ]
+      }
+    },
+    {
+      "Sid": "Stmt1623936733443",
+      "Action": [
+        "s3:ListAllMyBuckets",
+        "s3:ListBucket"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::mydatah76",
+      "Principal": "*"
+    }
+  ]
+}
